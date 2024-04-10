@@ -75,24 +75,33 @@ def count_chars(file_path):
 
 
 def main():
-    if  len(sys.argv) != 3:
+    if len(sys.argv) == 2:
+        def_file_path = sys.argv[1]
+        bytes_count = count_bytes(def_file_path)
+        line_count = count_lines(def_file_path)
+        word_count = count_words(def_file_path)
+        print(f'{line_count} {word_count} {bytes_count} {def_file_path}')
+    
+    elif len(sys.argv) == 3:
+        option = sys.argv[1]
+        file_path = sys.argv[2]
+
+        if option == '-c':
+            bytes_count = count_bytes(file_path)
+            print(f'{bytes_count} {file_path}')
+        elif option == '-l':
+            line_count = count_lines(file_path)
+            print(f'{line_count} {file_path}')
+        elif option == '-w':
+            word_count = count_words(file_path)
+            print(f'{word_count} {file_path}')
+        elif option == '-m':
+            char_count = count_chars(file_path)
+            print(f'{char_count} {file_path}')
+    
+    else:
         print('Usage: python ccwc.py -c <filename>')
         return
-    option = sys.argv[1]
-    file_path = sys.argv[2]
-
-    if option == '-c':
-        bytes_count = count_bytes(file_path)
-        print(f'{bytes_count} {file_path}')
-    elif option == '-l':
-        line_count = count_lines(file_path)
-        print(f'{line_count} {file_path}')
-    elif option == '-w':
-        word_count = count_words(file_path)
-        print(f'{word_count} {file_path}')
-    elif option == '-m':
-        char_count = count_chars(file_path)
-        print(f'{char_count} {file_path}')
 
 
 if __name__ == '__main__':

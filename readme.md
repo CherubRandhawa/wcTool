@@ -1,4 +1,5 @@
 Unix wc Command Line Tool Clone
+
 This project is a clone of the Unix wc command line tool, built as a coding challenge. The wc tool, short for "word count", is a command-line utility that outputs the number of lines, words, and bytes in a file. It's a classic example of a simple yet powerful Unix tool, following the Unix philosophy of doing one thing well.
 
 Unix Philosophy

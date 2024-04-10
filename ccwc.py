@@ -100,7 +100,7 @@ def main():
             print(f'{char_count} {file_path}')
     
     else:
-        print('Usage: python ccwc.py -c <filename>')
+        print('Usage: python ccwc.py <-option> <filename>')
         return
 
 
